@@ -50,7 +50,7 @@
 				    <div>我的资料</div>
 				    <div>更改密码</div>
 				    <div class="menu-sep"></div>
-				    <div>安全退出</div>
+				    <div iconCls="icon-exit">安全退出</div>
 				</div>
 			</div>
 		</div>
@@ -95,16 +95,24 @@
 								inIFrame: false,
 								title: node.text,
 								href: node.url,
+								iconCls:'icon-file',
 								closable: true
 							});
 						}
 					},
-					onLoadError: function() {
-						$(this).html("<center style='margin-top:15px;color: #666;'>该模块下暂时没有子菜单.</center>");
+					onLoadError: onNoTreeData,
+					onLoadSuccess: function(node, data) {
+						if(!data || data.length == 0) {
+							onNoTreeData();
+						}
 					}
 				});
 			});
 			
+			// 当左侧菜单下没有数据时展示
+			var onNoTreeData = function() {
+				$('#left-menu-tree').html("<center style='margin-top:15px;color: #666;'>该模块下暂时没有子菜单.</center>");
+			}
 			
 			// 执行初始化工作
 			window.onload = function() {
