@@ -90,12 +90,6 @@
 	background: url(images/s-btn-downarrow.png) center left no-repeat;
 }
 
-.icon-user-info {
-	background: url(images/user-info.png) center center no-repeat;
-}
-.icon-home {
-	background: url(images/icon-home.png) center center no-repeat;
-}
 
 #easyui-header .top-fa-center {
 	margin-top: 10px;
@@ -158,3 +152,18 @@
 	width: 18px; height: 18px;
 	background: url(images/layout-button-right.png) center center no-repeat;
 }*/
+
+
+/*自定义图标*/
+.icon-user-info {
+	background: url(images/user-info.png) center center no-repeat;
+}
+.icon-home {
+	background: url(images/icon-home.png) center center no-repeat;
+}
+.icon-file {
+	background: url(images/tree-file.png) center center no-repeat;
+}
+.icon-exit {
+	background: url(images/icon-exit.png) center center no-repeat;
+}
