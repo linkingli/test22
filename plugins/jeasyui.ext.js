@@ -19,7 +19,7 @@ $.easyuiExt = {
 			inIFrame: true, //是否使用iframe加载完整网页？
 			title: '新标签页',
 			href: 'javascript:;',
-			iconCls: '',
+			iconCls: 'icon-file',
 			closable: true
 		};
 		options = $.extend(defaults, options);
@@ -33,6 +33,7 @@ $.easyuiExt = {
 				id: options.id,
 				title: options.title,
 				closable: options.closable,
+				iconCls: options.iconCls,
 				href: options.href
 			}
 			if(options.icon) {
@@ -75,12 +76,12 @@ $.easyuiExt = {
 
 		var mmHtml = '<div id="main-tabs-mm" class="easyui-menu" style="width:175px;display:none;">' +
 			/*'<div id="mm-tabreload" data-options="name:6">刷新</div>' +*/
-			'<div id="mm-tabclose" data-options="name:1">关闭</div>' +
-			' <div id="mm-tabcloseall" data-options="name:2">全部关闭</div>' +
-			'<div id="mm-tabcloseother" data-options="name:3">除此之外全部关闭</div>' +
+			'<div id="mm-tabclose" iconCls="icon-no" data-options="name:1">关闭</div>' +
+			'<div id="mm-tabcloseother" data-options="name:3">关闭其他</div>' +
+			' <div id="mm-tabcloseall" iconCls="icon-cancel" data-options="name:2">全部关闭</div>' +
 			'<div class="menu-sep"></div>' +
-			'<div id="mm-tabcloseright" data-options="name:4">当前页左侧全部关闭</div>' +
-			'<div id="mm-tabcloseleft" data-options="name:5">当前页右侧全部关闭</div> </div>';
+			'<div id="mm-tabcloseright" iconCls="icon-undo" data-options="name:4">当前页左侧全部关闭</div>' +
+			'<div id="mm-tabcloseleft" iconCls="icon-redo" data-options="name:5">当前页右侧全部关闭</div> </div>';
 
 		$('body').append($(mmHtml));
 
