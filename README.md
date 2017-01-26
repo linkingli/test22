@@ -1,4 +1,4 @@
 # easyui-layout-demo
 
-![image](https://github.com/wuwz/easyui-layout-demo/blob/master/demo2.png)
-![image](https://github.com/wuwz/easyui-layout-demo/blob/master/demo.png)
+![image](https://raw.githubusercontent.com/wuwz/easyui-layout-demo/master/demo2.png)
+![image](https://raw.githubusercontent.com/wuwz/easyui-layout-demo/master/demo.png)
