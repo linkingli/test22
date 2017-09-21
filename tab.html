@@ -3,17 +3,18 @@
 <div class="easyui-tabs-content">
 
 	<div class="search-box easyui-panel" data-options="title:'查询条件'">
-		<input class="easyui-textbox" data-options="prompt:'Item ID'" />
-		<input class="easyui-textbox" data-options="prompt:'Product'" />
-		<input class="easyui-textbox" data-options="prompt:'List Price'" />
+		<input class="easyui-textbox" data-options="prompt:'渠道名称'" />
+		<input class="easyui-textbox" data-options="prompt:'渠道类型'" />
+		<input class="easyui-textbox" data-options="prompt:'所属渠道'" />
 		
 		<a class="easyui-linkbutton"><i class="fa fa-search"></i> 查询</a>
 		<a class="easyui-linkbutton"><i class="fa fa-rotate-left"></i> 重置</a>
 		<a class="easyui-linkbutton">高级查询 <i class="fa fa-angle-double-down"></i></a>
 	</div>
 	<div class="datagrid-content">
-		<table class="easyui-datagrid-test"></table>
+		<table class="easyui-datagrid-test"  id="tt"  pagination="true"></table>
 	</div>
+
 	
 	<script type="text/javascript">
 		$('.easyui-datagrid-test').datagrid({
@@ -26,19 +27,64 @@
 			fitColumns: true,
 			pagination: true,
 			columns: [ [
-				{field: 'itemid',title: 'Item ID',width:80},
-				{field: 'productid',title: 'Product',width:80},
-				{field: 'listprice',title: 'List Price',width:80},
-				{field: 'unitcost',title: 'Unit Cost',width:80},
-				{field: 'attr1',title: 'Attribute',width:80},
+				{field: 'itemid',title: 'ID',width:80},
+				{field: 'productid',title: '渠道名称',width:80},
+				{field: 'listprice',title: '渠道类型',width:80},
+				{field: 'unitcost',title: '是否CP',width:80},
+				{field: 'attr1',title: '所属渠道',width:80},
 				{field: 'status',title: 'Status',width:80}
 			] ],
-			toolbar: [
-				{text: 'Reload',iconCls:'icon-reload'},
-				{text: 'Add',iconCls:'icon-add'},
-				{text: 'Edit',iconCls:'icon-edit'},
-				{text: 'Remove',iconCls:'icon-remove'},
-			]
+			  toolbar: [{
+                    id: 'btnDownShelf',
+                    text: '添加',
+                    iconCls: 'icon-add',
+                    handler: function () {//给添加按钮绑定事件
+                        showAddFrm();
+                        //do not
+                        window.navigate("add.html"); 
+                    }
+                }, 
+                {
+                    id: 'btnDelete',
+                    text: '删除',
+                    iconCls: 'icon-remove',
+                    handler: function () {//改删除按钮绑定事件
+
+                        doDelete();
+                    }
+                }
+
+                ]
 		});
+
+		<!--add user-defined lable-->
+		var pager = $('#tt').datagrid('getPager');
+			pager.pagination({
+		showPageList:false,
+		buttons:[{
+			iconCls:'icon-search',
+			handler:function(){
+				alert('search');
+			}
+		},{
+			iconCls:'icon-add',
+			handler:function(){
+				alert('add');
+			}
+		},{
+			iconCls:'icon-edit',
+			handler:function(){
+				alert('edit');
+			}
+		}],
+		onBeforeRefresh:function(){
+			alert('before refresh');
+			return true;
+		}
+	});
+
 	</script>
+
+
+
 </div>

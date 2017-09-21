@@ -1,0 +1,1268 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    
+<head>          
+            <link rel="canonical" href="http://blog.csdn.net/qq348843576/article/details/45367225"/> 
+
+   
+
+  
+ <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848"> 
+       
+    <title>easyui data-options属性 - Welcome to Jeff blogs
+        - CSDN博客</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="1. 使用 data-options 来初始化属性。&#160;data-options是jQuery Easyui 最近两个版本才加上的一个特殊属性。通过这个属性，我们可以对easyui组件的实例化可以完全写入到html中，例如：div class=easyui-dialog style=width:400px;height:200px     data-options=" />
+
+    <meta name="keywords" content="" />
+
+   
+    <script src="http://static.blog.csdn.net/scripts/blog_static_head.min.js" type="text/javascript"></script>
+
+    
+        <!--new top-->
+       
+       
+        <!--new top-->
+    
+      <!-- ad begin -->
+         
+    <!-- ad end-->
+
+    <link rel="Stylesheet" type="text/css" href="http://static.blog.csdn.net/skin/skin-yellow/css/style.css?v=1.1" />
+
+    
+
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="/qq348843576/rss/list" />
+    <link rel="shortcut icon" href="http://c.csdnimg.cn/public/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="http://static.blog.csdn.net/scripts/SyntaxHighlighter/styles/default.css" />
+ 
+
+
+
+    <link href="http://c.csdnimg.cn/blog/csdn_public_blog_detail.min.css" type="text/css" rel="stylesheet" />
+     
+         <link rel="stylesheet" href="http://static.blog.csdn.net/css/csdn_blog_detail.min.css" />
+
+  
+
+
+    <!-- 请置于所有广告位代码之前 --> 
+            <script src="http://dup.baidustatic.com/js/ds.js"></script>
+
+</head>
+
+
+<body>  
+     
+        <div class="tracking-ad" data-view="true" data-mod="ad_popu_72"  data-mtp="62" data-order="40" data-con="ad_content_2072" >
+                     <script id="popuLayer_js_q" src="http://ads.csdn.net/js/popuLayer.js" defer="defer"  type="text/javascript"></script>
+                <div id="layerd" style="position: fixed;bottom:0px;right:0px;line-height:0px;z-index:1000">
+    	                <div class="J_close layer_close" style="display:;background-color:#efefef;padding:0px;color:#333;font:12px/24px Helvetica,Tahoma,Arial,sans-serif;text-align:right;">关闭</div><!-- 广告占位容器 -->
+                    <div id="cpro_u2895327">
+                        <!-- 投放代码 -->
+                        <script src="http://dup.baidustatic.com/js/ds.js"></script>
+                       <!-- 广告位：PC端-博客详情页右侧弹窗-300*250 -->
+                            <script>
+                                (function () {
+                                    var s = "_" + Math.random().toString(36).slice(2);
+                                    document.write('<div id="' + s + '"></div>');
+                                    (window.slotbydup = window.slotbydup || []).push({
+                                        id: '4740870',
+                                        container: s,
+                                        size: '300,250',
+                                        display: 'inlay-fix'
+                                    });
+                                })();
+                            </script>
+                    </div></div>
+                <script>  document.getElementById("popuLayer_js_q").onload = function () {
+      var styObjd = styObj = { width: "300px", "height": parseInt(250) + 28 };
+      window.CSDN.Layer.PopuLayer("#layerd", { storageName: "layerd", styleObj: styObjd, total: 50, expoire: 1000 * 60 });
+  }</script>
+            
+     
+        </div>
+
+    <!-- 广告位开始 -->
+        
+    <!-- 广告位结束 -->
+
+    
+   
+      <!--new top-->
+    <script id="toolbar-tpl-scriptId" fixed="true" prod="blog" skin="black" src="http://c.csdnimg.cn/public/common/toolbar/js/html.js" type="text/javascript"></script>
+     <!--new top-->
+    <div id="container">
+        <div id="header">
+    <div class="header">
+        <div id="blog_title">
+            <h2>
+                <a href="http://blog.csdn.net/qq348843576">Welcome to Jeff blogs</a></h2>
+            <h3>IT追梦 —&gt;在我不断学习中，在此写下星星点点的历史并把知识分享给大家</h3>
+            <div class="clear">
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        
+     
+    </div>
+</div>
+<div id="navigator">
+    <div class="navigator_bg">
+    </div>
+    <div class="navigator">
+        <ul>           
+                <li id="btnContents"><a href="http://blog.csdn.net/qq348843576?viewmode=contents"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_mulu'])">
+                    <img src="http://static.blog.csdn.net/images/ico_list.gif">目录视图</span></a></li>
+                <li id="btnView"><a href="http://blog.csdn.net/qq348843576?viewmode=list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_zhaiyao'])">
+                    <img src="http://static.blog.csdn.net/images/ico_summary.gif">摘要视图</span></a></li>
+                <li id="btnRss"><a href="http://blog.csdn.net/qq348843576/rss/list"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_RSS'])">
+                    <img src="http://static.blog.csdn.net/images/ico_rss.gif">订阅</span></a></li>                
+            
+
+            </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var username = "qq348843576";
+    var _blogger = username;
+    var blog_address = "http://blog.csdn.net/qq348843576";
+    var static_host = "http://static.blog.csdn.net";
+    var currentUserName = "";  
+</script>
+
+        <div id="body">
+            <div id="main">
+                <div class="main">
+                        <div class="ad_class">
+<div class="notice tracking-ad" data-mod='popu_3' > 
+
+
+<a href="http://blog.csdn.net/epubit17/article/details/78038722">
+<font color=red><strong>异步赠书：9月重磅新书升级，本本经典</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+<a href="http://edu.csdn.net/huiyiCourse/series_detail/66">
+<font color=blue><strong>SDCC 2017之区块链技术实战线上峰会</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+<a href="http://blog.csdn.net/turingbooks/article/details/78017356">
+<font color=blue><strong>程序员9月书讯</strong></font></a>
+
+&nbsp;&nbsp;&nbsp;&nbsp
+
+
+<a href="http://blog.csdn.net/broadview2006/article/details/78018836">
+<font color=red><strong>每周荐书：ES6、虚拟现实、物联网（评论送书）</strong></font></a>
+
+
+
+</div>                        </div>
+
+                        
+
+
+
+  
+
+
+
+
+
+
+<script   type="text/javascript" src="http://static.blog.csdn.net/scripts/category.js"></script>
+
+  <script type="text/ecmascript">
+      window.quickReplyflag = true;
+      var isBole = false; 
+      var fasrc="http://my.csdn.net/my/favorite/miniadd?t=easyui+data-options%e5%b1%9e%e6%80%a7&u=http://blog.csdn.net/qq348843576/article/details/45367225"
+    </script>
+<div id="article_details" class="details">
+    <div class="article_title">   
+         <span class="ico ico_type_Repost"></span>
+
+    <h1>
+        <span class="link_title"><a href="/qq348843576/article/details/45367225">
+        easyui data-options属性        
+           
+        </a>
+        </span>
+
+         
+    </h1>
+</div>
+
+   
+
+        <div class="article_manage clearfix">
+        <div class="article_r">
+            <span class="link_postdate">2015-04-29 15:26</span>
+            <span class="link_view" title="阅读次数">12247人阅读</span>
+            <span class="link_comments" title="评论次数"> <a href="#comments" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_pinglun'])">评论</a>(0)</span>
+            <span class="link_collect tracking-ad" data-mod="popu_171"> <a href="javascript:void(0);" onclick="javascript:collectArticle('easyui+data-options%e5%b1%9e%e6%80%a7','45367225');return false;" title="收藏">收藏</a></span>
+             <span class="link_report"> <a href="#report" onclick="javascript:report(45367225,2);return false;" title="举报">举报</a></span>
+
+        </div>
+    </div>    <style type="text/css">        
+            .embody{
+                padding:10px 10px 10px;
+                margin:0 -20px;
+                border-bottom:solid 1px #ededed;                
+            }
+            .embody_b{
+                margin:0 ;
+                padding:10px 0;
+            }
+            .embody .embody_t,.embody .embody_c{
+                display: inline-block;
+                margin-right:10px;
+            }
+            .embody_t{
+                font-size: 12px;
+                color:#999;
+            }
+            .embody_c{
+                font-size: 12px;
+            }
+            .embody_c img,.embody_c em{
+                display: inline-block;
+                vertical-align: middle;               
+            }
+             .embody_c img{               
+                width:30px;
+                height:30px;
+            }
+            .embody_c em{
+                margin: 0 20px 0 10px;
+                color:#333;
+                font-style: normal;
+            }
+    </style>
+    <script  type="text/javascript">
+        $(function () {
+            try
+            {
+                var lib = eval("("+$("#lib").attr("value")+")");
+                var html = "";
+                if (lib.err == 0) {
+                    $.each(lib.data, function (i) {
+                        var obj = lib.data[i];
+                        //html += '<img src="' + obj.logo + '"/>' + obj.name + "&nbsp;&nbsp;";
+                        html += ' <a href="' + obj.url + '" target="_blank">';
+                        html += ' <img src="' + obj.logo + '">';
+                        html += ' <em><b>' + obj.name + '</b></em>';
+                        html += ' </a>';
+                    });
+                    if (html != "") {
+                        setTimeout(function () {
+                            $("#lib").html(html);                      
+                            $("#embody").show();
+                        }, 100);
+                    }
+                }      
+            } catch (err)
+            { }
+            
+        });
+    </script>
+      <div class="category clearfix">
+        <div class="category_l">
+           <img src="http://static.blog.csdn.net/images/category_icon.jpg">
+            <span>分类：</span>
+        </div>
+        <div class="category_r">
+                    <label  onclick="GetCategoryArticles('3129799','qq348843576','top','45367225');">
+                        <span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_fenlei']);">前端技术<em>（16）</em></span>
+                      <img class="arrow-down" src="http://static.blog.csdn.net/images/arrow_triangle _down.jpg" style="display:inline;">
+                      <img class="arrow-up" src="http://static.blog.csdn.net/images/arrow_triangle_up.jpg" style="display:none;">
+                        <div class="subItem">
+                            <div class="subItem_t"><a  href="http://blog.csdn.net/qq348843576/article/category/3129799"  target="_blank">作者同类文章</a><i class="J_close">X</i></div>
+                            <ul class="subItem_l" id="top_3129799">                            
+                            </ul>
+                        </div>
+                    </label>                    
+        </div>
+    </div>
+
+  
+
+  
+  
+     
+
+
+<div id="article_content" class="article_content tracking-ad" data-mod=popu_307  data-dsm = "post" >
+
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; font-size:16px"><span style="margin:0px; padding:0px"></span></span></p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; font-size:16px"><span style="margin:0px; padding:0px">1. 使用 data-options 来初始化属性。</span></span></p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+&nbsp;</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+data-options是jQuery Easyui 最近两个版本才加上的一个特殊属性。通过这个属性，我们可以对easyui组件的实例化可以完全写入到html中，例如：</p>
+<div class="cnblogs_code" style="margin:5px 0px; padding:5px; border:1px solid rgb(204,204,204); overflow:auto; line-height:21.600000381469727px; background-color:rgb(245,245,245); font-family:'Courier New'!important">
+<pre style="margin-top:0px; margin-bottom:0px; padding:0px; white-space:pre-wrap; word-wrap:break-word; font-family:'Courier New'!important"><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">div </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">class</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;easyui-dialog&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> style</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;width:400px;height:200px&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">     data-options</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;title:'My Dialog',collapsible:true,iconCls:'icon-ok',onOpen:function(){}&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">     dialog content. </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">div</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span></pre>
+</div>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+属性，事件，都可以直接写在data-options里面，这样就方便多了。</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+&nbsp;来自：http://easyui.btboys.com/the-use-of-easyui-data-options.html</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+&nbsp;</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; font-size:16px"><span style="margin:0px; padding:0px">2.&nbsp; tools定义工具栏，继承自panel的应该都可以使用。</span></span></p>
+<div class="cnblogs_code" style="margin:5px 0px; padding:5px; border:1px solid rgb(204,204,204); overflow:auto; line-height:21.600000381469727px; background-color:rgb(245,245,245); font-family:'Courier New'!important">
+<div class="cnblogs_code_toolbar" style="margin:5px 0px 0px; padding:0px"><span class="cnblogs_code_copy" style="margin:0px; padding:0px 5px 0px 0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important"><a target="_blank" title="复制代码" style="margin:0px; padding:0px; text-decoration:underline; border:none!important"><img alt="复制代码" src="http://www.myexception.cn/img/2014/10/01/3db83c6e-ce12-4437-afa8-838033716461.gif" style="margin:0px; padding:0px; max-width:635px; height:auto; border:none!important"></a></span></div>
+<pre style="margin-top:0px; margin-bottom:0px; padding:0px; white-space:pre-wrap; word-wrap:break-word; font-family:'Courier New'!important">$('#p'<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">).panel({        width:</span>500<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">,        height:</span>150<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">,        title: </span>'My Panel'<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">,       tools: [{         iconCls:</span>'icon-add'<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">,         handler:</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">function</span>(){alert('new'<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">)}        },{         iconCls:</span>'icon-save'<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">        handler:</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">function</span>(){alert('save'<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">)}       }]    }); </span></pre>
+<div class="cnblogs_code_toolbar" style="margin:5px 0px 0px; padding:0px"><span class="cnblogs_code_copy" style="margin:0px; padding:0px 5px 0px 0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important"><a target="_blank" title="复制代码" style="margin:0px; padding:0px; text-decoration:underline; border:none!important"><img alt="复制代码" src="http://www.myexception.cn/img/2014/10/01/3db83c6e-ce12-4437-afa8-838033716461.gif" style="margin:0px; padding:0px; max-width:635px; height:auto; border:none!important"></a></span></div>
+</div>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+tools 同样可以加到data-options里面。</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+&nbsp;</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; font-size:16px"><span style="margin:0px; padding:0px">3.&nbsp; easyui 里面的组件属性，同样可以写在标签里面。</span></span></p>
+<div class="cnblogs_code" style="margin:5px 0px; padding:5px; border:1px solid rgb(204,204,204); overflow:auto; line-height:21.600000381469727px; background-color:rgb(245,245,245); font-family:'Courier New'!important">
+<div class="cnblogs_code_toolbar" style="margin:5px 0px 0px; padding:0px"><span class="cnblogs_code_copy" style="margin:0px; padding:0px 5px 0px 0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important"><a target="_blank" title="复制代码" style="margin:0px; padding:0px; text-decoration:underline; border:none!important"><img alt="复制代码" src="http://www.myexception.cn/img/2014/10/01/3db83c6e-ce12-4437-afa8-838033716461.gif" style="margin:0px; padding:0px; max-width:635px; height:auto; border:none!important"></a></span></div>
+<pre style="margin-top:0px; margin-bottom:0px; padding:0px; white-space:pre-wrap; word-wrap:break-word; font-family:'Courier New'!important"><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">div </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">id</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;p&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> class</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;easyui-panel&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> title</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;My Panel&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> style</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;width:500px;height:150px;padding:10px;background:#fafafa;&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">             iconCls</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;icon-save&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">  closable</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;true&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">             collapsible</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;true&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> minimizable</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;true&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> maximizable</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=true</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>  
+      <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">p</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>panel content.<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">p</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>  
+      <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">p</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>panel content.<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">p</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>  
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">div</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>  </pre>
+<div class="cnblogs_code_toolbar" style="margin:5px 0px 0px; padding:0px"><span class="cnblogs_code_copy" style="margin:0px; padding:0px 5px 0px 0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important"><a target="_blank" title="复制代码" style="margin:0px; padding:0px; text-decoration:underline; border:none!important"><img alt="复制代码" src="http://www.myexception.cn/img/2014/10/01/3db83c6e-ce12-4437-afa8-838033716461.gif" style="margin:0px; padding:0px; max-width:635px; height:auto; border:none!important"></a></span></div>
+</div>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+data-options和这里效果是一样，但是API里面大部分是按照属性来定义标签的，就想早先的HTML，而data-options就想style定义样式，不知道这两种有什么优劣。</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+&nbsp;</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<span style="margin:0px; padding:0px"><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; font-size:16px">&nbsp;4. 继承</span></span></p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+&nbsp;</p>
+<div class="cnblogs_code" style="margin:5px 0px; padding:5px; border:1px solid rgb(204,204,204); overflow:auto; line-height:21.600000381469727px; background-color:rgb(245,245,245); font-family:'Courier New'!important">
+<div class="cnblogs_code_toolbar" style="margin:5px 0px 0px; padding:0px"><span class="cnblogs_code_copy" style="margin:0px; padding:0px 5px 0px 0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important"><a target="_blank" title="复制代码" style="margin:0px; padding:0px; text-decoration:underline; border:none!important"><img alt="复制代码" src="http://www.myexception.cn/img/2014/10/01/3db83c6e-ce12-4437-afa8-838033716461.gif" style="margin:0px; padding:0px; max-width:635px; height:auto; border:none!important"></a></span></div>
+<pre style="margin-top:0px; margin-bottom:0px; padding:0px; white-space:pre-wrap; word-wrap:break-word; font-family:'Courier New'!important"><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;!</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,255); line-height:1.5!important">DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">html </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">xmlns</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;http://www.w3.org/1999/xhtml&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">head</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">title</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">title</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">script </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">src</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;easyui/jquery-1.7.2.min.js&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> type</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;text/javascript&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">script</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">script </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">src</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;easyui/jquery.easyui.min.js&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> type</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;text/javascript&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">script</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">link </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">href</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;easyui/themes/gray/easyui.css&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> rel</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;stylesheet&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> type</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;text/css&quot;</span> <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">/&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">link </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">href</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;easyui/themes/icon.css&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> rel</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;stylesheet&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> type</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;text/css&quot;</span> <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">/&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">script </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">type</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;text/javascript&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">         $(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () {             $(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">#dd</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">).dialog({                 title: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">My Dialog</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                 modal: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">true</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">, </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">//</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">dialog继承自window，而window里面有modal属性，所以dialog也可以使用</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">                collapsible: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">true</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">, </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">//</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">是否可折叠，默认false</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">                minimizable: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">false</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">, </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">//</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">是否可最小化，默认false</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">                maximizable: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">true</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">, </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">//</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">是否可最大化，默认false</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">                resizable: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">true</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">, </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">//</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">是否可折叠，默认false</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">                toolbar: [{                     iconCls: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">icon-add</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                     handler: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () { alert(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">new</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">) }                 }, {                     iconCls: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">icon-save</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                     handler: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () { alert(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">save</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">) }                 }],                 buttons: [{                     iconCls: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">icon-add</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                     handler: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () { alert(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">new</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">) }                 }, {                     iconCls: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">icon-save</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                     handler: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () { alert(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">save</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">) }                 }],                 </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">//</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,128,0); background-color:rgb(245,245,245); line-height:1.5!important">继承自panel,tool只有下面两个属性</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">                tools: [{                     iconCls: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">icon-add</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                     handler: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () { alert(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">new</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">) }                 }, {                     iconCls: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">icon-save</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">,                     handler: </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); background-color:rgb(245,245,245); line-height:1.5!important">function</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important"> () { alert(</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">save</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">'</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; background-color:rgb(245,245,245); line-height:1.5!important">) }                 }]             });         })     </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">script</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">head</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">body</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+    <span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">div </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important">id</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;dd&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(255,0,0); line-height:1.5!important"> style</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">=&quot;width: 500px; height: 400px;&quot;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important">         Dialog Content.     </span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">div</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">body</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span>
+<span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&lt;/</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(128,0,0); line-height:1.5!important">html</span><span style="margin:0px; padding:0px; list-style:none outside none; word-break:normal; word-wrap:break-word; color:rgb(0,0,255); line-height:1.5!important">&gt;</span></pre>
+<div class="cnblogs_code_toolbar" style="margin:5px 0px 0px; padding:0px"><span class="cnblogs_code_copy" style="margin:0px; padding:0px 5px 0px 0px; list-style:none outside none; word-break:normal; word-wrap:break-word; line-height:1.5!important"><a target="_blank" title="复制代码" style="margin:0px; padding:0px; text-decoration:underline; border:none!important"><img alt="复制代码" src="http://www.myexception.cn/img/2014/10/01/3db83c6e-ce12-4437-afa8-838033716461.gif" style="margin:0px; padding:0px; max-width:635px; height:auto; border:none!important"></a></span></div>
+</div>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+实现效果就是这样的！</p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<img alt="" src="" style="margin:0px; padding:0px; max-width:635px; height:auto; border:0px"></p>
+<p style="margin:10px auto; padding-top:0px; padding-bottom:0px; font-family:Verdana,Arial,Helvetica,sans-serif; line-height:21.600000381469727px">
+<br>
+</p>
+   
+</div>
+
+
+
+
+<!-- Baidu Button BEGIN -->
+
+
+
+
+<div class="bdsharebuttonbox tracking-ad" style="float: right;" data-mod="popu_172">
+<a href="#" class="bds_more" data-cmd="more" style="background-position:0 0 !important; background-image: url(http://bdimg.share.baidu.com/static/api/img/share/icons_0_16.png?v=d754dcc0.png) !important"></a>
+<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"  style="background-position:0 -52px !important"></a>
+<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"style="background-position:0 -104px !important"></a>
+<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"style="background-position:0 -260px !important"></a>
+<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"style="background-position:0 -208px !important"></a>
+<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"style="background-position:0 -1612px !important" ></a>
+</div>
+<script>window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "1", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+<!-- Baidu Button END -->
+
+   
+
+<!--172.16.140.11-->
+
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=1536434" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+
+
+
+ 
+
+
+        <div id="digg" ArticleId="45367225" >
+            <dl id="btnDigg" class="digg digg_disable"  onclick="btndigga();">
+               
+                 <dt>顶</dt>
+                <dd>0</dd>
+            </dl>
+           
+              
+            <dl id="btnBury" class="digg digg_disable"  onclick="btnburya();">
+              
+                  <dt>踩</dt>
+                <dd>6</dd>               
+            </dl>
+            
+        </div>
+     <div class="tracking-ad" data-mod="popu_222"><a href="javascript:void(0);" >&nbsp;</a>   </div>
+    <div class="tracking-ad" data-mod="popu_223"> <a href="javascript:void(0);" >&nbsp;</a></div>
+    <script type="text/javascript">
+        function btndigga() {
+            $(".tracking-ad[data-mod='popu_222'] a").click();
+        }
+        function btnburya() {
+            $(".tracking-ad[data-mod='popu_223'] a").click();
+        }
+            </script>
+
+   <ul class="article_next_prev">
+                <li class="prev_article"><span  onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian']);location.href='http://blog.csdn.net/qq348843576/article/details/45344781';">上一篇</span><a href="http://blog.csdn.net/qq348843576/article/details/45344781" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_shangyipian'])">eclipse字体颜色设置的方法</a></li>
+                <li class="next_article"><span onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian']);location.href='http://blog.csdn.net/qq348843576/article/details/45390061';">下一篇</span><a href="http://blog.csdn.net/qq348843576/article/details/45390061" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_xiayipian'])">异常：java.lang.NoSuchMethodException: org.apache.catalina.deploy.WebXml addFilter</a></li>
+    </ul>
+
+    <div style="clear:both; height:10px;"></div>
+
+
+            <div class="similar_article"   >
+                    <h4></h4>
+                    <div class="similar_c"style="margin:20px 0px 0px 0px">
+                        <div class="similar_c_t">
+                          &nbsp;&nbsp;相关文章推荐
+                        </div>
+                   
+                        <div class="similar_wrap tracking-ad" data-mod="popu_36"  style="max-height:250px">                       
+                            <ul class="similar_list fl">    
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://download.csdn.net/download/chenxh/343" title="Flash MX 旋转立方体" strategy="BlogCommendFromBaidu_0" target="_blank">Flash MX 旋转立方体</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://edu.csdn.net/huiyiCourse/series_detail/64?utm_source=blog7" title="大数据技术实战线上峰会--董西成" strategy="undefined" target="_blank">大数据技术实战线上峰会--董西成</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/wf4878921/article/details/26453881" title="easyui datagrid 部分参数说明" strategy="BlogCommendFromBaidu_1" target="_blank">easyui datagrid 部分参数说明</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://edu.csdn.net/huiyiCourse/series_detail/61?utm_source=blog7" title="30天系统掌握机器学习--唐宇迪" strategy="undefined" target="_blank">30天系统掌握机器学习--唐宇迪</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/wan353694124/article/details/46413131" title="easyui中combobox的值改变onchang事件" strategy="BlogCommendFromBaidu_2" target="_blank">easyui中combobox的值改变onchang事件</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://edu.csdn.net/combo/detail/382?utm_source=blog7" title="ORACLE数据库学习资料集锦" strategy="undefined" target="_blank">ORACLE数据库学习资料集锦</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/eson_15/article/details/51347734" title="【SSH网上商城项目实战09】添加和更新商品类别功能的实现" strategy="BlogCommendFromBaidu_3" target="_blank">【SSH网上商城项目实战09】添加和更新商品类别功能的实现</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://edu.csdn.net/course/detail/3010?utm_source=blog7" title="PHP从零开始实战篇" strategy="undefined" target="_blank">PHP从零开始实战篇</a>
+                                   </li>
+                            </ul>
+                              <ul class="similar_list fr">      
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/xiaobai51509660/article/details/17301367" title="easyui data-options的使用" strategy="BlogCommendFromBaidu_4" target="_blank">easyui data-options的使用</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://edu.csdn.net/course/detail/3149?utm_source=blog7" title="玩转微信小程序第一篇" strategy="undefined" target="_blank">玩转微信小程序第一篇</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/potty15/article/details/6172271" title="安装ctags及taglist" strategy="BlogCommendFromBaidu_5" target="_blank">安装ctags及taglist</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://edu.csdn.net/course/detail/4565?utm_source=blog7" title="深度学习案例分享—人脸检测" strategy="undefined" target="_blank">深度学习案例分享—人脸检测</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/baidu_35776955/article/details/52254711" title="easyui data-options的使用" strategy="BlogCommendFromBaidu_6" target="_blank">easyui data-options的使用</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/xwnxwn/article/details/9364005" title="easyui data-options的使用" strategy="BlogCommendFromBaidu_7" target="_blank">easyui data-options的使用</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/haozhugogo/article/details/54835389" title="easyUI data-options的使用" strategy="BlogCommendFromBaidu_8" target="_blank">easyUI data-options的使用</a>
+                                   </li>
+                                   <li>
+                                       <em>•</em>
+                                       <a href="http://blog.csdn.net/u010375663/article/details/42198563" title="EasyUI之data-options" strategy="BlogCommendFromBaidu_9" target="_blank">EasyUI之data-options</a>
+                                   </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>   
+      
+</div>
+
+     <div>
+           
+
+       
+                           
+            <!-- 广告位：PC端-博客内容页-banner1-960*90 --> 
+           
+         <script type="text/javascript" src="http://mpb1.iteye.com/kfunnhoouimhnlou.js"></script>
+    </div>
+
+<div id="suggest"></div>
+         <script  language="javascript" type='text/javascript'>     
+             $(function(){
+                 $.get("/qq348843576/svc/GetSuggestContent/45367225",function(data){
+                     $("#suggest").html(data);
+                 });     
+             });             
+         </script>  
+
+
+
+            
+                                    
+            
+                                    
+
+        <!-- 广告位开始 -->
+        <!-- 广告位结束 -->
+
+
+<div class="comment_class">
+    <div id="comment_title" class="panel_head">
+        <span class="see_comment">查看评论</span><a name="comments"></a></div>
+    <div id="comment_list">
+    </div>
+    <div id="comment_bar">
+    </div>
+    <div id="comment_form">
+    </div>
+    <div class="announce">
+        * 以上用户言论只代表其个人观点，不代表CSDN网站的观点或立场<a name="reply"></a><a name="quote"></a></div>
+</div>
+
+<script type="text/javascript">
+    var fileName = '45367225';
+    var commentscount = 0;
+    var islock = false
+</script>
+
+    <div id="ad_bot">
+    </div>
+<div id="report_dialog">
+</div>
+
+<div id="d-top"  style="bottom:60px;">
+
+        <a id="quick-reply" class="btn btn-top q-reply" title="快速回复" style="display:none;">
+            <img src="http://static.blog.csdn.net/images/blog-icon-reply.png" alt="快速回复">
+        </a>    
+    <a id="d-top-a" class="btn btn-top backtop"  style="display: none;" title="返回顶部" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_huidaodingbu'])" style="">         
+         <img src="http://static.blog.csdn.net/images/top.png" alt="TOP">
+    </a>
+</div>
+<script type="text/javascript">
+    $(function ()
+    {
+        $("#ad_frm_0").height("90px");
+        
+        setTimeout(function(){
+            $("#ad_frm_2").height("200px");
+        },1000);    
+    });
+  
+</script>
+<style type="text/css">
+    .tag_list
+    {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #D7CBC1;
+        color: #000000;
+        font-size: 12px;
+        line-height: 20px;
+        list-style: none outside none;
+        margin: 10px 2% 0 1%;
+        padding: 1px;
+    }
+    .tag_list h5
+    {
+        background: none repeat scroll 0 0 #E0DBD3;
+        color: #47381C;
+        font-size: 12px;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 5px;
+        margin: 0;
+    }
+    .tag_list h5 a
+    {
+        color: #47381C;
+    }
+    .classify
+    {
+        margin: 10px 0;
+        padding: 4px 12px 8px;
+    }
+    .classify a
+    {
+        margin-right: 20px;
+        white-space: nowrap;
+    }
+</style>
+
+
+
+
+
+<div id="pop_win" style="display:none ;position: absolute; z-index: 10000; border: 1px solid rgb(220, 220, 220); top: 222.5px; left: 630px; opacity: 1; background: none 0px 0px repeat scroll rgb(255, 255, 255);">
+    
+</div>
+<div id="popup_mask"></div>
+<style>
+    #popup_mask
+    {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+        left: 0px;
+        top: 0px;
+        opacity: 0.3;
+        filter: alpha(opacity=30);
+        display: none;
+    }
+
+</style>
+
+
+
+
+<script type="text/javascript">
+    $(function(){        
+        
+        setTimeout(function(){
+            $(".comment_body:contains('回复')").each(function(index,item){
+                var u=$(this).text().split('：')[0].toString().replace("回复","")
+                var thisComment=$(this);
+                if(u)
+                {
+                    $.getJSON("https://passport.csdn.net/get/nick?callback=?", {users: u}, function(a) {
+                        if(a!=null&&a.data!=null&&a.data.length>0)
+                        {
+                            nick=a.data[0].n; 
+                            if(u!=nick)
+                            {
+                                thisComment.text(thisComment.text().replace(u,nick));  
+                            }
+                        }       
+                    });  
+                }
+            });         
+
+        },200);  
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },5000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },10000);
+
+        setTimeout(function(){
+            $(".math").each(function(index,value){$(this).find("span").last().css("color","#fff"); })
+        },15000);
+        
+        setTimeout(function(){
+            $("a img[src='http://js.tongji.linezing.com/stats.gif']").parent().css({"position":"absolute","left":"50%"});
+        },300);
+    });
+
+    function loginbox(){
+        var $logpop=$("#pop_win");
+        $logpop.html('<iframe src="https://passport.csdn.net/account/loginbox?service=http://static.blog.csdn.net/callback.htm" frameborder="0" height="600" width="400" scrolling="no"></iframe>');
+
+        $('#popup_mask').css({
+            opacity: 0.5,
+            width: $( document ).width() + 'px',
+            height:  $( document ).height() + 'px'
+        });
+        $('#popup_mask').css("display","block");
+ 
+        $logpop.css( {
+            top: ($( window ).height() - $logpop.height())/ 2  + $( window 
+       ).scrollTop() + 'px',
+            left:($( window ).width() - $logpop.width())/ 2
+        } );
+ 
+        setTimeout( function () {
+            $logpop.show();
+            $logpop.css( {
+                opacity: 1
+            } );
+        }, 200 );
+ 
+        $('#popup_mask').unbind("click");
+        $('#popup_mask').bind("click", function(){
+            $('#popup_mask').hide();
+            var $clopop = $("#pop_win");
+            $("#common_ask_div_sc").css("display","none");
+            $clopop.css( {
+                opacity: 0
+            } );
+            setTimeout( function () {
+                $clopop.hide();
+            }, 350 );
+            return false;
+        });
+    }   
+
+    var articletitle='easyui data-options属性';
+
+</script>
+
+
+
+
+
+
+
+
+
+
+                        <div class="clear">
+                        </div>
+                    </div>                   
+                
+            </div>
+                   
+           <div id="side">
+               
+    <div class="side">
+<div id="panel_Profile" class="panel">
+<ul class="panel_head"><span>个人资料</span></ul>
+<ul class="panel_body profile">
+<div id="blog_userface">
+    <a href="http://my.csdn.net/qq348843576" target="_blank">
+    <img src="http://avatar.csdn.net/7/2/1/1_qq348843576.jpg" title="访问我的空间" style="max-width:90%"/>
+    </a>
+    <br />
+    <span><a href="http://my.csdn.net/qq348843576" class="user_name" target="_blank">qq348843576</a></span>
+</div>
+<div class="interact">
+
+    <a href="javascript:void(0);" class="attent" id="span_add_follow" title="[加关注]"></a>
+
+ <a href="javascript:void(0);" class="letter"  title="[发私信]" onclick="window.open('http://msg.csdn.net/letters/model?receiver=qq348843576','_blank','height=350,width=700');_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_sixin'])"></a>  
+</div>
+<div id="blog_medal">
+                <div id="bms_box">
+                                            <a  target="_blank">
+                                                    <img src="http://c.csdnimg.cn/jifen/images/xunzhang/xunzhang/chizhiyiheng.png" onmouseover="m_over_m(this,4)" onmouseout="m_out_m()" alt="2" >
+                                            </a>
+               </div>
+</div>
+<ul id="blog_rank">
+    <li>访问：<span>80960次</span></li>
+    <li>积分：<span>1415</span> </li>    
+    <li >等级： <span style="position:relative;display:inline-block;z-index:1" >
+            <img src="http://c.csdnimg.cn/jifen/images/xunzhang/jianzhang/blog4.png" alt="" style="vertical-align: middle;" id="leveImg">
+            <div id="smallTittle" style=" position: absolute;  left: -24px;  top: 25px;  text-align: center;  width: 101px;  height: 32px;  background-color: #fff;  line-height: 32px;  border: 2px #DDDDDD solid;  box-shadow: 0px 2px 2px rgba (0,0,0,0.1);  display: none;   z-index: 999;">
+            <div style="left: 42%;  top: -8px;  position: absolute;  width: 0;  height: 0;  border-left: 10px solid transparent;  border-right: 10px solid transparent;  border-bottom: 8px solid #EAEAEA;"></div>
+            积分：1415 </div>
+        </span>  </li>
+    <li>排名：<span>千里之外</span></li>
+</ul>
+<ul id="blog_statistics">
+    <li>原创：<span>62篇</span></li>
+    <li>转载：<span>28篇</span></li>
+    <li>译文：<span>0篇</span></li>
+    <li>评论：<span>11条</span></li>
+</ul>
+</ul>
+</div>
+
+
+<div class="panel" id="panel_Search">
+    <ul class="panel_head"><span>文章搜索</span></ul>
+    <ul class="panel_body" class="form_search">
+        <form id="frmSearch" action="http://so.csdn.net/search" class="form_search csdn-tracking-statistics" target="_blank"  data-mod="popu_306">
+        <span><input id="inputSearch" type="text" class="blogsearch" title="请输入关键字" /></span>
+        <input id="btnSubmit" type="button" value="搜索" title="search in blog" />
+        <input type="hidden" name="q" id="inputQ" />
+        <input type="hidden" name="t" value="blog" />
+        <a id="btnSearchBlog" target="_blank"></a>
+        </form>
+    </ul>
+</div>
+
+<script type="text/javascript">
+
+   
+    $(function () {
+        $("#btnSubmit").unbind("click");
+        $("#btnSubmit").click(function () {           
+            search();
+        });
+
+        $("#frmSearch").submit(function () {           
+            search();
+            return false;
+        });
+
+        function search()
+        {
+            if ($("#inputSearch").val() == "") {               
+                alert("请录入搜索关键词！");                         
+                return false;
+            }
+            //var url = "http://so.csdn.net/so/search/s.do?q=" + encodeURIComponent($("#inputSearch").val()) + "&u=" + username + "&t=blog";           
+            var url = "https://www.baidu.com/s?wd=" + encodeURIComponent($("#inputSearch").val()) + "%20site%3Ablog.csdn.net"
+            window.location.href = url;
+        }   
+    });
+</script><div id="panel_Category" class="panel">
+<ul class="panel_head"><span>文章分类</span></ul>
+<ul class="panel_body">    
+                 <li>
+                    <a href="/qq348843576/article/category/3129799" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">前端技术</a><span>(17)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3159387" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">后台程序</a><span>(11)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5824511" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">JavaSE</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3159985" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">SSH框架与整合</a><span>(9)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3170333" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">数据库</a><span>(14)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3165423" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">AJAX</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3170713" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Web Service</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3170575" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">网络安全技术与加密算法</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3156263" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">其他/杂谈</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3194963" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Socket网络编程</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3248325" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">正则表达式</a><span>(2)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/3248563" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">JavaScript</a><span>(10)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5570229" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">Highcharts</a><span>(5)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5640575" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">JAVA导出Excel</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5682283" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">面试题积累</a><span>(1)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5729875" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">EasyUI</a><span>(10)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5778017" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">android安卓开发</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5897715" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">数据结构与算法</a><span>(3)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/5981407" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">项目中常用的功能</a><span>(4)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/6082971" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">HTML5+CSS3</a><span>(0)</span>
+                </li>
+                 <li>
+                    <a href="/qq348843576/article/category/6907781" onclick="_gaq.push(['_trackEvent','function', 'onclick', 'blog_articles_wenzhangfenlei']); ">oracle</a><span>(1)</span>
+                </li>
+</ul>
+</div><div id="hotarticls" class="panel tracking-ad" data-mod="popu_340">
+<ul class="panel_head">
+    <span>       
+阅读排行    </span>
+</ul>
+
+<ul class="panel_body itemlist">
+<li>
+<a href="/qq348843576/article/details/45367225" title="easyui data-options属性">easyui data-options属性</a><span>(12191)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/47065695" title="int数组与String数组互相转换和函数互相转换">int数组与String数组互相转换和函数互相转换</a><span>(7604)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/46673409" title="Highcharts自定义按钮导出图表">Highcharts自定义按钮导出图表</a><span>(4061)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/47683895" title="Hibernate直接执行SQL语句">Hibernate直接执行SQL语句</a><span>(2756)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/45765801" title="网站入侵的攻击方法和原理">网站入侵的攻击方法和原理</a><span>(2401)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/49757891" title="JS中a标签中的URL传值乱码">JS中a标签中的URL传值乱码</a><span>(2239)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/46503469" title="在Java中Highcharts前后台数据交互传输">在Java中Highcharts前后台数据交互传输</a><span>(2040)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/45483669" title="WebService在JAVA中的部署（有图解）">WebService在JAVA中的部署（有图解）</a><span>(1677)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/47684431" title="datetimebox设置默认时分秒">datetimebox设置默认时分秒</a><span>(1664)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/46695983" title="Oracle创建两表关联查询的视图">Oracle创建两表关联查询的视图</a><span>(1613)</span>
+</li>
+</ul>
+</div>
+<div id="hotarticls2" class="panel tracking-ad" data-mod="popu_341">
+<ul class="panel_head"><span>评论排行</span></ul>
+<ul class="panel_body itemlist">
+<li>
+<a href="/qq348843576/article/details/45482807" title="使用MyEclipse对MongoDB数据库 进行增删改查操作">使用MyEclipse对MongoDB数据库 进行增删改查操作</a><span>(3)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/46766999" title="Oracle中rownum的用法">Oracle中rownum的用法</a><span>(2)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/51527680" title="session超时时间设置方法">session超时时间设置方法</a><span>(1)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/48623235" title="List集合进行界面分页">List集合进行界面分页</a><span>(1)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/45330811" title="JSP中的：request.getScheme()+&quot;://&quot;+request.getServerName()+&quot;:&quot;+request.getServer">JSP中的：request.getScheme()+&quot;://&quot;+request.getServerName()+&quot;:&quot;+request.getServer</a><span>(1)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/49683581" title="Hibernate映射实体类时解决没有ID的问题">Hibernate映射实体类时解决没有ID的问题</a><span>(1)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/46673409" title="Highcharts自定义按钮导出图表">Highcharts自定义按钮导出图表</a><span>(1)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/45769173" title="网站安全之Java加密体系（MD5算法）">网站安全之Java加密体系（MD5算法）</a><span>(1)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/45222977" title="tomcat增加内存方法">tomcat增加内存方法</a><span>(0)</span>
+</li>
+<li>
+<a href="/qq348843576/article/details/71436829" title="order by 语句对null字段的默认排序">order by 语句对null字段的默认排序</a><span>(0)</span>
+</li>
+</ul>
+</div>
+<div id="homepageArticles" class="panel tracking-ad" data-mod="popu_4">
+<ul class="panel_head"><span>推荐文章</span></ul>
+<ul class="panel_body" id="ad_commend">
+<ul>
+<li><a href="http://blog.csdn.net/blogdevteam/article/details/77651442" target="_blank">* CSDN日报20170828——《4个方法快速打造你的阅读清单》</a></li>
+<li><a href="http://blog.csdn.net/lowprofile_coding/article/details/77852131" 
+target="_blank">* Android检查更新下载安装</a></li>
+<li><a href="http://blog.csdn.net/yhaolpz/article/details/77366154"target="_blank">* 动手打造史上最简单的 Recycleview 侧滑菜单</a></li>
+<li><a href="http://blog.csdn.net/sweettool/article/details/77018506" 
+target="_blank">* TCP网络通讯如何解决分包粘包问题</a></li>
+<li><a href="http://edu.csdn.net/huiyiCourse/series_detail/66" 
+target="_blank">* SDCC 2017之区块链技术实战线上峰会</a></li>
+<li><a href="http://blog.csdn.net/pangpang123654/article/details/78012706" 
+target="_blank">* 快速集成一个视频直播功能
+</a></li>
+
+</ul></ul>
+</div>
+
+
+<div id="newcomments" class="panel">
+<ul class="panel_head"><span>最新评论</span></ul>
+<ul class="panel_body itemlist">
+    <li>
+   
+         <a href="/qq348843576/article/details/48623235#comments">List集合进行界面分页</a>
+    <p style="margin:0px;"><a href="/qq_36452763" class="user_name">qq_36452763</a>:
+intPage：当前页码；number ：每页显示数据；totalCount ：一共几条数据；这个s...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/49683581#comments">Hibernate映射实体类时解决没有ID的问题</a>
+    <p style="margin:0px;"><a href="/qq_35234382" class="user_name">qq_35234382</a>:
+博主，能说的详细点么
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/45330811#comments">JSP中的：request.getScheme()+&quot;://&quot;+request.getServerName()+&quot;:&quot;+request.getServer</a>
+    <p style="margin:0px;"><a href="/u013380777" class="user_name">u013380777</a>:
+豪哥。赞
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/46673409#comments">Highcharts自定义按钮导出图表</a>
+    <p style="margin:0px;"><a href="/linzhihong1" class="user_name">linzhihong1</a>:
+为什么我这样做没反应啊，是否需要导入exporting.js
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/51527680#comments">session超时时间设置方法</a>
+    <p style="margin:0px;"><a href="/qq_27328793" class="user_name">qq_27328793</a>:
+永不过期哇？
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/45482807#comments">使用MyEclipse对MongoDB数据库 进行增删改查操作</a>
+    <p style="margin:0px;"><a href="/wcz15855101168" class="user_name">wcz15855101168</a>:
+楼主可否指导下，mongodb在myeclipse中的语句，昨天加你qq了，麻烦同意下
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/45769173#comments">网站安全之Java加密体系（MD5算法）</a>
+    <p style="margin:0px;"><a href="/qq_27328793" class="user_name">qq_27328793</a>:
+这个之前我做过一次MD５的加密方法，存入数据库里之后和我输入的不一样，但是如果用户再次输入他先前自己...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/46766999#comments">Oracle中rownum的用法</a>
+    <p style="margin:0px;"><a href="/qq348843576" class="user_name">qq348843576</a>:
+@linyeifei:不是，是在from里嵌套一个语句，比如要从一个班中查出男生年龄，那我们可以直接...
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/46766999#comments">Oracle中rownum的用法</a>
+    <p style="margin:0px;"><a href="/linyeifei" class="user_name">linyeifei</a>:
+这个就是在Where语句里在写入一个Select查询语句吗？
+    </p>
+    </li>
+    <li>
+   
+         <a href="/qq348843576/article/details/46766999#comments">使用MyEclipse对MongoDB数据库 进行增删改查操作</a>
+    <p style="margin:0px;"><a href="/qq348843576" class="user_name">qq348843576</a>:
+@ironxue:不客气，因为我也是新手小白，很多东西要学习，我也会把学习的一些继续以新手方式分享给...
+    </p>
+    </li>
+</ul>
+</div>
+    </div>
+    <div class="clear">
+    </div>
+
+                   <div class="tracking-ad" data-view="true" data-mod="ad_popu_189" data-mtp="63" data-order="40" data-con="ad_content_1259" style="width: 250px; height: 500px;">
+                        <div id="nav_show_top_stop" style="width: 250px;height: 500px;z-index:1000"><div id="cpro_u2734133">
+                             <!-- 投放代码 -->
+                             
+                            <!-- 请置于所有广告位代码之前 -->
+                            <script src="http://dup.baidustatic.com/js/ds.js"></script>
+
+                            <!-- 广告位：PC端-博客详情页-左侧button1-250*250 -->
+                                    <script>
+                                        (function () {
+                                            var s = "_" + Math.random().toString(36).slice(2);
+                                            document.write('<div id="' + s + '"></div>');
+                                            (window.slotbydup = window.slotbydup || []).push({
+                                                id: '4740887',
+                                                container: s,
+                                                size: '250,250',
+                                                display: 'inlay-fix'
+                                            });
+                                        })();
+                                    </script>
+
+                                                                                                    </div>
+                            <div id="cpro_u3031286">
+                                 <!-- 投放代码 -->
+                               
+                                <!-- 请置于所有广告位代码之前 -->
+                                <script src="http://dup.baidustatic.com/js/ds.js"></script>
+
+                                <!-- 广告位：PC端-博客详情页-左侧Button2-250*250 -->
+                                <script>
+                                    (function () {
+                                        var s = "_" + Math.random().toString(36).slice(2);
+                                        document.write('<div id="' + s + '"></div>');
+                                        (window.slotbydup = window.slotbydup || []).push({
+                                            id: '4740890',
+                                            container: s,
+                                            size: '250,250',
+                                            display: 'inlay-fix'
+                                        });
+                                    })();
+                                </script>
+
+
+
+                            </div></div>
+                   </div>
+                    <script>
+
+                        setTimeout(function () {
+                            var naviga_offsetTop = 0; function naviga_stay_top() {
+                                var scrollTop = jQuery(document).scrollTop();
+                                if (scrollTop > naviga_offsetTop) {
+                                    jQuery("#nav_show_top_stop").css({ "position": "fixed" });
+                                    jQuery("#nav_show_top_stop").css({ "top": "0px" });
+                                } else { jQuery("#nav_show_top_stop").css({ "position": "fixed" }); jQuery("#nav_show_top_stop").css({ "top": naviga_offsetTop - scrollTop + "px" }); }
+                            }
+                            function onload_function() {
+                                naviga_offsetTop = jQuery("#nav_show_top_stop").position().top;
+                                jQuery(window).bind("scroll", naviga_stay_top); jQuery(window).bind("mousewheel", naviga_stay_top);
+                                jQuery(document).bind("scroll", naviga_stay_top); jQuery(document).bind("mousewheel", naviga_stay_top);
+                            } jQuery(document).ready(onload_function);
+                        }, 200);
+
+                    </script>
+
+           </div>   
+            <div class="clear">
+            </div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="http://passport.csdn.net/content/loginbox/login.js"></script>
+<script type="text/javascript">
+    $(function () {
+        function __get_code_toolbar(snippet_id) {
+            return $("<span class='tracking-ad' data-mod='popu_167'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "' target='_blank' title='在CODE上查看代码片'  style='text-indent:0;'><img src='https://code.csdn.net/assets/CODE_ico.png' width=12 height=12 alt='在CODE上查看代码片' style='position:relative;top:1px;left:2px;'/></a></span>"
+                    + "<span class='tracking-ad' data-mod='popu_170'><a href='https://code.csdn.net/snippets/"
+                    + snippet_id
+                    + "/fork' target='_blank' title='派生到我的代码片' style='text-indent:0;'><img src='https://code.csdn.net/assets/ico_fork.svg' width=12 height=12 alt='派生到我的代码片' style='position:relative;top:2px;left:2px;'/></a></span>");
+        }
+        
+        $("[code_snippet_id]").each(function () {
+            __s_id = $(this).attr("code_snippet_id");
+            if (__s_id != null && __s_id != "" && __s_id != 0 && parseInt(__s_id) > 70020) {
+                __code_tool = __get_code_toolbar(__s_id);
+                $(this).prev().find(".tools").append(__code_tool);
+            }
+        });
+
+        $(".bar").show();
+    });
+</script>
+
+
+
+
+
+    </div>
+     
+
+
+       <script type="text/javascript" src="http://static.blog.csdn.net/public/res/bower-libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>   
+    
+    <script src="http://static.blog.csdn.net/scripts/csdn_blog_detail.min.js" type="text/javascript"></script>
+        
+    <script type="text/javascript" src="http://c.csdnimg.cn/blog/csdn_public_blog_detail.min.js?20170719001"></script>
+
+    <script type="text/javascript" src="http://medal.blog.csdn.net/showblogmedal.ashx?blogid=5013415"></script>
+
+
+  <div id="a52b5334d" style="width: 1px; height: 1px; display: none;">
+                    <script id="adJs52b5334"></script>
+                    <script>document.getElementById("adJs52b5334").src = "http://ads.csdn.net/js/opt/52b5334.js?t=" + Math.random();</script>
+   </div>
+          
+    <div class="pop_CA_cover"  style="display:none"></div>
+    <div class="pop pop_CA"  style="display:none">
+          <div class="CA_header">
+            收藏助手
+            <span class="cancel_icon"  id="fapancle"  onclick="$('.pop_CA').hide();$('.pop_CA_cover').hide();"></span>
+          </div>
+          <iframe src="" id="fa" frameborder="0" width="100%" height="360"  scrolling="no" ></iframe>
+    </div>
+
+
+        <script type="text/javascript">
+
+            $(function () {
+                var fromjs = $("#fromjs");
+                if (fromjs.length > 0) {
+                    $("#fromjs .markdown_views pre").addClass("prettyprint");
+                    prettyPrint();
+
+                    $('pre.prettyprint code').each(function () {
+                        var lines = $(this).text().split('\n').length;
+                        var $numbering = $('<ul/>').addClass('pre-numbering').hide();
+                        $(this).addClass('has-numbering').parent().append($numbering);
+                        for (i = 1; i <= lines; i++) {
+                            $numbering.append($('<li/>').text(i));
+                        };
+                        $numbering.fadeIn(1700);
+                    });
+
+                    $('.pre-numbering li').css("color", "#999");
+                }
+            });
+
+            $(".markdown_views a[target!='_blank']").attr("target", "_blank");
+
+            //$(".toc a[target='_blank']").attr("target", "");
+
+            setTimeout(function () {
+                $(".toc a[target='_blank']").attr("target", "");
+            }, 500);
+
+        </script>
+
+</body>
+</html>   

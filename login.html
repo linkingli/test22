@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>EasyUI通用示例布局模版.</title>
+		<title>Team2</title>
 		<link rel="stylesheet" href="plugins/easyui/themes/metro/easyui.css" />
 		<link rel="stylesheet" href="plugins/webfont/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="static/login/animate.min.css" />
@@ -13,22 +13,27 @@
 	</head>
 
 	<body>
-		<div id="login-body" class="animated fadeInDown">
+		<div id="login-body" >
+			<!--picture-->
 			<div class="project-icon-div">
 				<span class="fa fa-leaf"></span>
 			</div>
+			<!--welcome title-->
 			<div class="welcome-div">
-				<span class="welcome-tip">欢迎使用EasyUI通用示例布局模版</span>
+				<span class="welcome-ti">Team2</span>
 			</div>
+			<!--jump to index.html-->
 			<div class="login-form-div">
 				<form id="form" action="index.html" method="get">
 					<p>
+					<input type="text" name="id" class="easyui-linkbutton" disabled="text">
 						<input type="text" name="username" class="easyui-textbox" data-options="prompt:'用户名'" />
 					</p>
 					<p>
 						<input type="text" name="password" class="easyui-passwordbox" data-options="prompt:'密码'" />
 					</p>
 					<p>
+						<!--click word can choice -->
 						<label class="remember_me">
 							<input name="rememberMe" type="checkbox"/> 记住我?
 						</label>
@@ -42,14 +47,15 @@
 				</div>
 			</div>
 			<span class="copyright-text">
-				&copy; 2016 <a href="http://www.github.com/wuwz">jeeweb.org</a>
+				&copy; 2017 <a href="http://www.baidu.com">www.baidu.com</a>
 			</span>
 		</div>
-		
+		<!--justice name and passwd-->
+		<!-- fadein():cost time to show meas-->
 		<script type="text/javascript">
 			$('#form').submit(function() {
-				if($('input[name=username]').val() != 'admin') {
-					$('.error-tip').fadeIn(200);
+				if($('input[name=username]').val() != 'lijun') {
+					$('.error-tip').fadeIn(1000);
 					return false;
 				}
 				return true;

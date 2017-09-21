@@ -1,8 +1,8 @@
 [{
-    "text":"系统配置",
+    "text":"Note",
     "children":[{
-		"text":"Java"
+		"text":"history"
     },{
-		"text":"C#"
+		"text":"error"
     }]
 }]
