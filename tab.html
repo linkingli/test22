@@ -2,74 +2,115 @@
 <!--此处可以引入除基础js以外的其他js插件以及css样式文件-->
 <div class="easyui-tabs-content">
 
+
+	<!--
 	<div class="search-box easyui-panel" data-options="title:'查询条件'">
 		<input class="easyui-textbox" data-options="prompt:'渠道名称'" />
 		<input class="easyui-textbox" data-options="prompt:'渠道类型'" />
 		<input class="easyui-textbox" data-options="prompt:'所属渠道'" />
 		
-		<a class="easyui-linkbutton"><i class="fa fa-search"></i> 查询</a>
-		<a class="easyui-linkbutton"><i class="fa fa-rotate-left"></i> 重置</a>
-		<a class="easyui-linkbutton">高级查询 <i class="fa fa-angle-double-down"></i></a>
-	</div>
-	<div class="datagrid-content">
-		<table class="easyui-datagrid-test"  id="tt"  pagination="true"></table>
+		<a class="easyui-linkbutton"><i class="fa fa-search"></i> </a>
+		<input type="查询" value="查询">
+
+		<!--
+				<a class="easyui-linkbutton"><i class="fa fa-rotate-left"></i> 重置</a>
+			<a class="easyui-linkbutton">高级查询 <i class="fa fa-angle-double-down"></i></a>
+
+		
+	</div>	
+	-->
+	
+
+
+
+ <br>渠道名称:<br>
+<input type="text" name="lastname" value="Team2">
+<br><br>
+渠道类型:<br>
+<input type="text" name="lastname" value="Team2">
+<br><br>
+所属渠道:<br>
+<input type="text" name="lastname" value="Team2">
+<br><br>
+<input type="submit" value="search">
+</form> 
+
+
+</form>
+	
+	<div class="datagrid-content" >
+	<th><table class="easyui-datagrid-test"  id="tt"  pagination="true" ></table></th>
+
+	
+		
 	</div>
 
 	
 	<script type="text/javascript">
 		$('.easyui-datagrid-test').datagrid({
 			title: '数据表格',
-			fit:true,
+			
 			singleSelect:true,
 			collapsible:true,
-			url:'json/datagrid_data1.json',
+			url:'/channelDown/findDownByConditionPages?currPage=1&kw=&type=',
 			method:'get',
 			fitColumns: true,
 			pagination: true,
-			columns: [ [
-				{field: 'itemid',title: 'ID',width:80},
-				{field: 'productid',title: '渠道名称',width:80},
-				{field: 'listprice',title: '渠道类型',width:80},
-				{field: 'unitcost',title: '是否CP',width:80},
-				{field: 'attr1',title: '所属渠道',width:80},
-				{field: 'status',title: 'Status',width:80}
-			] ],
+			 pagination:true,
+             striped: true,
+			columns: 
+
+			[ [
+
+				{field: 'id',title: 'ID',width:80},
+				{field: 'channelName',title: '渠道名称',width:80},
+				{field: 'type',title: '渠道类型',width:80},
+				{field: 'name',title: 'name',width:80},
+				
+				
+				{field:'action',title:'Action',width:70,align:'center',
+					formatter:function(value,row,index){
+						
+							var e = '<a href="chane.html" onclick="editrow(this)">Edit</a> ';
+							var d = '<a href="#" onclick="test(r)">Delete</a>';
+							return e+d;
+							
+					}
+				}
+			] ]
+			,
 			  toolbar: [{
                     id: 'btnDownShelf',
-                    text: '添加',
+                    text: 'source',
                     iconCls: 'icon-add',
                     handler: function () {//给添加按钮绑定事件
-                        showAddFrm();
-                        //do not
-                        window.navigate("add.html"); 
+                     
+                        window.location.reload();
                     }
                 }, 
-                {
-                    id: 'btnDelete',
-                    text: '删除',
-                    iconCls: 'icon-remove',
-                    handler: function () {//改删除按钮绑定事件
-
-                        doDelete();
-                    }
-                }
+               
 
                 ]
 		});
 
-		<!--add user-defined lable-->
+		<!--add user-defined layer-->
 		var pager = $('#tt').datagrid('getPager');
 			pager.pagination({
+				pageSize: 5,
+
+
+
 		showPageList:false,
 		buttons:[{
-			iconCls:'icon-search',
+			
 			handler:function(){
-				alert('search');
+				
 			}
 		},{
 			iconCls:'icon-add',
 			handler:function(){
 				alert('add');
+				 window.location.href='add.html';
 			}
 		},{
 			iconCls:'icon-edit',
@@ -78,10 +119,16 @@
 			}
 		}],
 		onBeforeRefresh:function(){
-			alert('before refresh');
+			alert('refresh');
+			window.location.reload();
 			return true;
 		}
 	});
+
+	function test()
+  {
+   window.location.reload();
+  }
 
 	</script>
 
